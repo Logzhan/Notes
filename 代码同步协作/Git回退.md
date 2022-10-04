@@ -26,7 +26,7 @@ git log
 ```shell
 # 方法1
 git add .
-git reset --hardde>
+git reset --hard "commit_code"
 
 # 方法2，实际测试
 git stash
