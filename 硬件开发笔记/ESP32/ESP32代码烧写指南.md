@@ -10,11 +10,11 @@
 
 ESP32烧写主要有三个部分组成，一个是系统固件XXX.Bin、第二个是Bootloader.bin、第三个是分区表partition-table.bin等部分组成。
 
-![image-20221011211735789](.\Image\Esp32代码烧写.png)
+![image-20221011211735789](.\Image\Esp32_CodeWrite.png)
 
 3、根据以上的信息我们可以知道有3个文件，分别从0x10000,0x1000,0x8000地址烧写。大致的大小为700KB，26KB，3KB。在ESP32 IDF的Build工程中，找到这三个文件分别为XXX.Bin、Bootloader.bin、partition-table.bin，按照信息填写烧写工具：
 
-![GeekTrack的固件烧写主界面](.\Image\GeekTrack的固件烧写主界面.png)
+![GeekTrack的固件烧写主界面](.\Image\GeekTrack_Download_Main.png)
 
 4、通过整合Bin的方式烧写固件
 
