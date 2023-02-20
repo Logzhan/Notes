@@ -59,7 +59,17 @@ Host: 127.0.0.1:2222
 Connection: Keep-Alive
 ```
 
-上述情况下，如果我们收到包含Range信息的请求时，返回的时候就需要额外指定一些信息。
+上述情况下，如果我们收到包含Range信息的请求时，返回的时候就需要额外指定一些信息。HTTP的返回有如下的规则：
+
+```Java
+// 如果用户拖动了进度条，那么HttpRequest就会包含Range信息
+// 1.此时contentLength = end - st, 需要返回Content-Length:头
+"Content-Length: " + contentLength + "\r\n"
+// 2.此时请求的是部分的信息，所以返回的Responce的类型是206，表示部分内容
+HttpStatus.PARTIAL_CONTENT = 206
+```
+
+
 
 ```Java
 // 获取文件长度bytes
@@ -91,5 +101,22 @@ httpRes.setContentInputStream(contentIn);
 // HttpReq提交数据
 httpReq.post(httpRes);
 contentIn.close();
+```
+
+HTTP 视频请求
+
+```Java
+// 已知信息
+File_length = 2794939639
+File_Range_st = bytes=2792308814
+// 分析
+st = 2792308814
+// 由于文件长度是2794939639，所以换算的索引是0~2794939639-1
+ed = 2794939639 - 1
+content_lenght = ( ed - st + 1 )= File_length - 1 - st + 1
+= ed - st
+    
+    
+    
 ```
 
