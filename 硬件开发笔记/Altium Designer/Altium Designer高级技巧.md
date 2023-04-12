@@ -6,4 +6,10 @@
 
 **关闭高亮网络：**选中网络、Cirl + 鼠标左键双击
 
-​		
+## 二、Altium Designer 元件的透明度设置
+
+​		在Altium Designer中，选中元件后，可以在properties中设置3D body的Opacity，这个参数可以控制3D渲染时3D元器件的透明度。对于部分对其他遮挡严重的器件，可以适当调整透明度，实现更好的渲染呈现。
+
+## 三、Altium Designer 铺铜隐藏
+
+​		在画电路板的时候，由于铺铜的存在，其会导致其他的线路被掩盖，导致我们无法看清其他的布线，我们可以在View Configuration中找到IObject visibity，
