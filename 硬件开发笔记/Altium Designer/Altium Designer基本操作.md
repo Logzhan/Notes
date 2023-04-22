@@ -11,3 +11,9 @@
 ## 二、元件的强制删除
 
 ​		部分情况下，我们在Altium Designer选中元件后，点击DEL无法起到删除的作用。此时Ctrl + DEL可以快速完成删除操作。
+
+三、原理图自动分配位号
+
+​		操作快捷键(TAA) 打开原理图图注配置，选择更新更改列表、接收更改。
+
+<img src="E:\技术武器库\技术开发笔记\硬件开发笔记\Altium Designer\Image\Altium_SCH_Mark.png" alt="image-20230416152400400" style="zoom:50%;" />
